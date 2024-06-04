@@ -29,10 +29,6 @@ export const Button = styled(TouchableRipple).attrs(() => ({
   borderless: true, 
   rippleColor: "#FFFFFF90",
 }))`
-  border-radius: 6px;
-  padding-left: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
   align-content: center;
   flex-direction: row;
   justify-content: space-between;
@@ -65,9 +61,14 @@ export const Label = styled.Text`
   font-family: ${props => props.theme.font.book};
 `;
 
+export const SubLabel = styled.Text`
+  color: ${props => props.theme.color.title};
+  font-size: 18px;
+  font-family: ${props => props.theme.font.medium};
+`;
+
 export const Title = styled.Text`
   color: ${props => props.theme.color.title};
-  letter-spacing: -.5px;
   font-size: 24px;
   font-family: ${props => props.theme.font.bold};
 `;

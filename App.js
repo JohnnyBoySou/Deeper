@@ -17,14 +17,14 @@ export default function App() {
     async function prepare() {
       try{
         await Font.loadAsync({
-          Font_Book: require('@assets/fonts/Pier-Book.otf'),
-          Font_Medium: require('@assets/fonts/Pier-Medium.ttf'),
-          Font_Bold: require('@assets/fonts/Pier-Bold.ttf'),
-          Font_Regular: require('@assets/fonts/Pier-Regular.ttf'),
-          Rox_Book: require('@assets/fonts/Rox-Book.otf'),
-          Rox_Medium: require('@assets/fonts/Rox-Medium.ttf'),
-          Rox_Bold: require('@assets/fonts/Rox-Bold.ttf'),
-          Rox_Regular: require('@assets/fonts/Rox-Regular.ttf'),
+          Font_Book: require('@fonts/Pier-Book.otf'),
+          Font_Medium: require('@fonts/Pier-Medium.otf'),
+          Font_Bold: require('@fonts/Pier-Bold.otf'),
+          Font_Regular: require('@fonts/Pier-Regular.otf'),
+          Rox_Book: require('@fonts/Rox-Book.otf'),
+          Rox_Medium: require('@fonts/Rox-Medium.otf'),
+          Rox_Bold: require('@fonts/Rox-Bold.otf'),
+          Rox_Regular: require('@fonts/Rox-Regular.otf'),
         });
       }catch (e) {
         console.warn(e);

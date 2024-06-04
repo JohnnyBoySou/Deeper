@@ -1,5 +1,5 @@
 export default{
-  background: "#171717",
+  background: "#262626",
   color: {
     primary: "#ED274A",
     secundary: "#FF620A",
@@ -25,6 +25,11 @@ export default{
       title: "#FFF"
     },
   },
+  margin: {
+    h: 26,
+    v: 24,
+  },
+
   size: {
     label: 18,
     title: 24,
