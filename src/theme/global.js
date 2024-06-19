@@ -7,6 +7,7 @@ export const Main = styled.SafeAreaView`
 `
 export const Scroll = styled.ScrollView`
   flex: 1;
+  padding-top: 20px;
 `
 
 export const View = styled.View`

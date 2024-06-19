@@ -13,7 +13,7 @@ export default function SearchScreen({ navigation, }) {
     const [type, settype] = useState('Pastor');
     return (
         <Main >
-            <MotiImage source={require('@imgs/search.png')} style={{ width: width, height: height, position: 'absolute', top: 1, }} />
+            <MotiImage source={require('@imgs/search.png')} style={{ width: width, height: height + 30, position: 'absolute', top: -5, }} />
             <Button onPress={() => navigation.goBack()} style={{ position: 'absolute', top: 10, zIndex: 999, alignSelf: 'center', width: 82, height: 10, borderRadius: 100, backgroundColor: '#ffffff50', }}>
                <Column/>
             </Button>
@@ -58,14 +58,54 @@ const data = [{
     name: 'Avivamento',
     desc: 'Conjunto de ministrações.',
     img: require('@imgs/avivamento.png'),
-    chapters: 12, 
-    duration: '26min',
-}]
+    follows: '24,978',
+    type: 'Motivacional',
+    banner: require('@banner/avivamento.png'),
+    versiculo: {
+        message: "“Sejam bondosos e compassivos uns para com os outros, perdoando‑se mutuamente, como Deus os perdoou em Cristo.”",
+        book: 'Efésios',
+        chapter: 4,
+        verse: 32,    
+    },
+    chapters: 14,
+    duration: 26,
+    reward: 12,
+    list: [
+        {
+            id: 1,
+            title: 'Criando laços com o Senhor',
+            duration: 2,
+            chapter: 1,
+            pastor: 'Pr. Marcos Pereira',
+        },
+        {
+            id: 2,
+            title: 'Fortes no Senhor somos',
+            duration: 3,
+            chapter: 2,
+            pastor: 'Pr. André Marçal',
+        },
+        {
+            id: 3,
+            title: 'Criando laços com o Senhor',
+            duration: 3,
+            chapter: 3,
+            pastor: 'Pr. Marcos Pereira',
+        },
+        {
+            id:4,
+            title: 'Fortes no Senhor somos',
+            duration: 1,
+            chapter: 4,
+            pastor: 'Pr. André Marçal',
+        },
+    ]
+},]
 
 const Result = ({item}) => {
     const navigation = useNavigation();
     return(
-        <Button style={{ marginTop: 12, borderRadius: 12,}} onPress={() => {navigation.navigate('SerieSingle', {item: item,})}} >
+        <Button style={{ marginTop: 12, borderRadius: 12,}} onPress={() => {navigation.navigate('Details', {item: item,})}} >
         <Row >
             <MotiImage from={{opacity: 0, translateY: 20,}} animate={{opacity: 1, translateY: 0,}} source={item.img} style={{ width: 110, height: 180, borderRadius: 12, }} />
             <Column style={{ marginLeft: 30, }}>
